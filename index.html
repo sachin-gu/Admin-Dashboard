@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard SPA</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <aside class="sidebar">
+        <h2>Admin Dashboard</h2>
+        <ul>
+          <li onclick="changeTab('dashboard')">Dashboard</li>
+          <li onclick="changeTab('manageUsers')">Manage Users</li>
+          <li onclick="changeTab('manageEmployees')">Manage Employees</li>
+          <li onclick="changeTab('registerEmployee')">Employee Registration</li>
+          <li onclick="changeTab('registerShop')">Shop Registration</li>
+          <li onclick="changeTab('reports')">Reports</li>
+          <li onclick="changeTab('setting')">Settings</li>
+        </ul>
+        <footer class="admin-footer">
+          <p>Admin User</p>
+          <p>admin@userplatform.com</p>
+        </footer>
+      </aside>
+
+      <main class="content">
+        <section id="dashboard" class="tab-content active">
+          <h1>Welcome to Dashboard</h1>
+          <p>Select a tab to get started.</p>
+        </section>
+
+        <section id="manageUsers" class="tab-content">
+          <div class="header-row">
+            <h2>User Management</h2>
+            <button class="add-btn">Add User</button>
+          </div>
+          <input
+            type="text"
+            class="search"
+            placeholder="Search by name, email or ID"
+          />
+          <div class="table-container">
+            <table>
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Name</th>
+                  <th>Email</th>
+                  <th>Garments Type</th>
+                  <th>Phone Number</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>USR001</td>
+                  <td>John Smith</td>
+                  <td>john.smith@example.com</td>
+                  <td>Men Garments</td>
+                  <td>+91 9876543210</td>
+                  <td>
+                    <button class="edit">✏️</button>
+                    <button class="delete">🗑️</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>USR002</td>
+                  <td>Sarah Johnson</td>
+                  <td>sarah.j@example.com</td>
+                  <td>Women Garments</td>
+                  <td>+91 8765432109</td>
+                  <td>
+                    <button class="edit">✏️</button>
+                    <button class="delete">🗑️</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>USR003</td>
+                  <td>Michael Brown</td>
+                  <td>m.brown@example.com</td>
+                  <td>Both</td>
+                  <td>+91 7654321098</td>
+                  <td>
+                    <button class="edit">✏️</button>
+                    <button class="delete">🗑️</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>USR004</td>
+                  <td>Emily Davis</td>
+                  <td>emily.d@example.com</td>
+                  <td>Women Garments</td>
+                  <td>+91 6543210987</td>
+                  <td>
+                    <button class="edit">✏️</button>
+                    <button class="delete">🗑️</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>USR005</td>
+                  <td>Robert Wilson</td>
+                  <td>r.wilson@example.com</td>
+                  <td>Men Garments</td>
+                  <td>+91 5432109876</td>
+                  <td>
+                    <button class="edit">✏️</button>
+                    <button class="delete">🗑️</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <footer class="user-footer">
+            <button style="background-color: black; color: goldenrod">
+              Previous
+            </button>
+            <button>Next</button>
+          </footer>
+        </section>
+
+        <section id="manageEmployees" class="tab-content">
+          <div class="header-row">
+            <h2>Employee Management</h2>
+            <button class="add-btn">Add Employees</button>
+          </div>
+          <input
+            type="text"
+            class="search"
+            placeholder="Search by name, email or ID"
+          />
+          <div class="table-container">
+            <table>
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Full Name</th>
+                  <th>Gender</th>
+                  <th>Designation</th>
+                  <th>Phone Number</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>EMP001</td>
+                  <td>John Smith</td>
+                  <td>Male</td>
+                  <td>Store Manager</td>
+                  <td>+91 9876543210</td>
+                  <td>
+                    <button class="edit">✏️</button>
+                    <button class="delete">🗑️</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>EMP002</td>
+                  <td>Sarah Johnson</td>
+                  <td>Female</td>
+                  <td>Sales Associate</td>
+                  <td>+91 8765432109</td>
+                  <td>
+                    <button class="edit">✏️</button>
+                    <button class="delete">🗑️</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>EMP003</td>
+                  <td>Michael Brown</td>
+                  <td>Male</td>
+                  <td>Inventory Manager</td>
+                  <td>+91 7654321098</td>
+                  <td>
+                    <button class="edit">✏️</button>
+                    <button class="delete">🗑️</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>EMP004</td>
+                  <td>Emily Davis</td>
+                  <td>Female</td>
+                  <td>Cashier</td>
+                  <td>+91 6543210987</td>
+                  <td>
+                    <button class="edit">✏️</button>
+                    <button class="delete">🗑️</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>EMP005</td>
+                  <td>Robert Wilson</td>
+                  <td>Male</td>
+                  <td>Tailor</td>
+                  <td>+91 5432109876</td>
+                  <td>
+                    <button class="edit">✏️</button>
+                    <button class="delete">🗑️</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <footer class="user-footer">
+            <button style="background-color: black; color: goldenrod">
+              Previous
+            </button>
+            <button>Next</button>
+          </footer>
+        </section>
+
+        <section id="registerEmployee" class="tab-content">
+          <h2>Employee Registration</h2>
+          <p>Complete the form below to create your employee account</p>
+          <form class="form">
+            <h3>Personal Information</h3>
+            <label for="First name">First Name</label>
+            <input type="text" placeholder="Enter First Name" required />
+            <label for="last name">Last Name</label>
+            <input type="text" placeholder="Enter last Name" required />
+            <label for="DateOfBirth">Date of Birth</label>
+            <input type="date" />
+            <label for="Gender">Gender</label>
+            <select name="gender" id="gender">
+              <option value="Select One" selected>Select One</option>
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+              <option value="other">Other</option>
+            </select>
+            <br />
+            <h3>Employment Details</h3>
+            <label for="jobtitle/Designation">Job Title/Designation</label>
+            <input
+              type="text"
+              placeholder="Enter Job Title/Designation"
+              required
+            />
+            <label for="Date OF Joining">Date OF Joining</label>
+            <input type="date" />
+            <label for="Salary">Salary</label>
+            <input type="text" placeholder="Enter Salary" />
+            <br />
+            <h3>Contact & Security</h3>
+            <label for="email id">Email id</label>
+            <input type="email" placeholder="Email" required />
+            <label for="phone number">Phone Number</label>
+            <input type="text" placeholder="Phone Number" required />
+            <label for="phone number">Alternate Mobile Number(Optional)</label>
+            <input type="text" placeholder="Alternate Mobile Number" />
+
+            <div class="form-group">
+              <label for="password">Password</label>
+              <div class="password-wrapper">
+                <input
+                  type="password"
+                  id="password"
+                  placeholder="Password"
+                  required
+                />
+                <button type="button" id="verifyBtn">Verify</button>
+              </div>
+
+              <label for="confirmPassword">Confirm Password</label>
+              <input
+                type="password"
+                id="confirmPassword"
+                placeholder="Confirm Password"
+                required
+              />
+
+              <label>
+                <input type="checkbox" id="showPassword" />
+                Show Password
+              </label>
+
+              <div id="message"></div>
+
+              <button type="submit" id="submitBtn" disabled>
+                Create Employee Account
+              </button>
+            </div>
+          </form>
+        </section>
+
+        <!-- shop registration  -->
+
+        <section id="registerShop" class="tab-content">
+          <h2>
+            Register Your
+            <span>Shop</span>
+          </h2>
+          <p>Complete the form below to create your shop account</p>
+          <form class="form">
+            <!-- Personal Info -->
+            <h3>Personal Information</h3>
+            <div class="row">
+              <div class="column">
+                <label>First Name</label>
+                <input type="text" placeholder="Enter first name" required />
+              </div>
+              <div class="column">
+                <label>Last Name</label>
+                <input type="text" placeholder="Enter last name" required />
+              </div>
+            </div>
+
+            <!-- Shop Info -->
+            <h3>Shop Information</h3>
+            <label>Shop Name</label>
+            <input type="text" placeholder="Enter your shop name" required />
+
+            <label>Shop Address</label>
+            <textarea
+              rows="3"
+              placeholder="Enter complete shop address"
+              required
+            ></textarea>
+
+            <label>Garments Type</label>
+            <select required>
+              <option selected>Select one</option>
+              <option>Men</option>
+              <option>Women</option>
+              <option>Kids</option>
+              <option>Unisex</option>
+            </select>
+
+            <!-- Contact & Security -->
+            <h3>Contact & Security</h3>
+
+            <label>Phone Number</label>
+            <div class="password-wrapper">
+              <input type="tel" placeholder="Enter phone number" required />
+              <button type="button">Verify Phone</button>
+            </div>
+
+            <label>Email</label>
+            <div class="password-wrapper">
+              <input type="email" placeholder="Enter email address" required />
+              <button type="button">Send OTP</button>
+            </div>
+
+            <div class="row">
+              <div class="column">
+                <label>Password</label>
+                <div class="password-wrapper">
+                  <input
+                    type="password"
+                    placeholder="Create password"
+                    required
+                  />
+                  <span class="toggle-eye">👁️</span>
+                </div>
+              </div>
+
+              <div class="column">
+                <label>Confirm Password</label>
+                <div class="password-wrapper">
+                  <input
+                    type="password"
+                    placeholder="Confirm password"
+                    required
+                  />
+                  <span class="toggle-eye">👁️</span>
+                </div>
+              </div>
+            </div>
+
+            <button id="submitBtn" type="submit">Create Shop Account</button>
+
+            <p class="terms">
+              By registering, you agree to our
+              <a href="#">Terms of Service</a>
+              and
+              <a href="#">Privacy Policy</a>
+            </p>
+
+            <p class="login-link">
+              Already have an account?
+              <a href="#">Login</a>
+            </p>
+          </form>
+        </section>
+
+        <section id="reports" class="tab-content">
+          <h2>Reports</h2>
+          <p>This is where you can view and generate reports.</p>
+          <button>Generate Report</button>
+        </section>
+      </main>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>

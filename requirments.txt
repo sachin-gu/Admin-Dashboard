@@ -1,0 +1,2 @@
+# No backend or package dependencies required
+# Pure HTML, CSS, and JavaScript SPA
